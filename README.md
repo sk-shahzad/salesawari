@@ -1,0 +1,1 @@
+<h1>Advanced django project for vehicle buy and sell</h1>
