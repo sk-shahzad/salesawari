@@ -25,7 +25,7 @@ def contact(request):
                 return redirect('contact')
 
         contact_instances = Contact.objects.create(name=name, email=email, phone=phone, message=message)
-        messages.success(request, "Thank you for contact SaleSawari, we usally reply within a few minutes", {'messages': messages})
+        messages.success(request, "Thank you for contact SaleSawari, we usally reply within a few minutes", )
 
     return render(request, 'homepage/contact-us.html')
 
