@@ -21,6 +21,13 @@
 </head>
 </head>
 <body onload="initialize()" class="dark-scheme">
+    {% comment %} {% if messages %}
+    <ul class="messges">
+        {% for message in messages %}
+        <li>{{message}}</li>
+        {% endfor %}
+    </ul>
+    {% endif %} {% endcomment %}
     <header class="transparent has-topbar">
         <div id="topbar" class="topbar-dark text-light">
             <div class="container">
@@ -52,7 +59,7 @@
                             <div class="de-flex-col">
                                 <!-- logo begin -->
                                 <div id="logo">
-                                    <a href="index.html">
+                                    <a href="{% url 'home' %}">
                                         <img class="logo-1" src="{% static 'images/logo-light.png' %}" alt="">
                                         <img class="logo-2" src="{% static 'images/logo-light.png' %}" alt="">
                                     </a>
@@ -62,29 +69,11 @@
                         </div>
                         <div class="de-flex-col header-col-mid">
                             <ul id="mainmenu">
-                                <li><a class="menu-item" href="index.html">Home</a>
-                                    <ul>
-                                        <li><a class="menu-item" href="02_dark-index-1.html">New: Homepage 1 Dark</a></li>
-                                        <li><a class="menu-item" href="02_dark-index-2.html">New: Homepage 2 Dark</a></li>
-                                        <li><a class="menu-item" href="index.html">Homepage Main</a></li>
-                                        <li><a class="menu-item" href="index-2.html">Homepage 2</a></li>
-                                        <li><a class="menu-item" href="index-3.html">Homepage 3</a></li>
-                                        <li><a class="menu-item" href="index-4.html">Homepage 4</a></li>
-                                        <li><a class="menu-item" href="index-5.html">Homepage 5</a></li>
-                                        <li><a class="menu-item" href="index-6.html">Homepage 6</a></li>
-                                    </ul>
+                                <li><a class="menu-item" href="{% url 'home' %}">Home</a>
                                 </li>
-                                <li><a class="menu-item" href="cars.html">Cars</a>
-                                    <ul>
-                                        <li><a class="menu-item" href="cars.html">Cars List 1</a></li>
-                                        <li><a class="menu-item" href="02_dark-cars.html">Cars List 1 Dark</a></li>
-                                        <li><a class="menu-item" href="cars-list.html">Cars List 2</a></li>
-                                        <li><a class="menu-item" href="02_dark-cars-list.html">Cars List 2 Dark</a></li>
-                                        <li><a class="menu-item" href="car-single.html">Cars Single</a></li>
-                                        <li><a class="menu-item" href="02_dark-car-single.html">Cars Single Dark</a></li>
-                                    </ul>
+                                <li><a class="menu-item" href="cars.html">About us</a>
                                 </li>
-                                <li><a class="menu-item" href="booking.html">Booking</a></li>
+                                <li><a class="menu-item" href="{% url 'contact' %}">Contact</a></li>
                                 <li><a class="menu-item" href="account-dashboard.html">My Account</a>
                                     <ul>
                                         <li><a class="menu-item" href="account-dashboard.html">Dashboard</a></li>
@@ -96,7 +85,7 @@
                                 <li><a class="menu-item" href="#">Pages</a>
                                     <ul>
                                         <li><a class="menu-item" href="about.html">About Us</a></li>
-                                        <li><a class="menu-item" href="contact.html">Contact</a></li>
+                                        <li><a class="menu-item" href="{% url 'contact' %}">Contact</a></li>
                                         <li><a class="menu-item" href="login.html">Login</a></li>
                                         <li><a class="menu-item" href="register.html">Register</a></li>
                                         <li><a class="menu-item" href="404.html">Page 404</a></li>
@@ -143,6 +132,12 @@
                             <div class="menu_side_area">
                                 <a href="login.html" class="btn-main">Sign In</a>
                                 <span id="menu-btn"></span>
+                            </div>
+                            <div class="de-flex-col">
+                                <div class="menu_side_area">
+                                    <a href="login.html" class="btn-main">Sign Up</a>
+                                    <span id="menu-btn"></span>
+                                </div>
                             </div>
                         </div>
                     </div>
