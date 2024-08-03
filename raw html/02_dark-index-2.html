@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="zxx">
 
 <head>
@@ -12,13 +11,13 @@
     <meta content="" name="author">
     <!-- CSS Files
     ================================================== -->
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" id="bootstrap">
-    <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet" type="text/css" id="mdb">
-    <link href="{% static 'css/plugins.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'css/coloring.css' %}" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="css/mdb.min.css" rel="stylesheet" type="text/css" id="mdb">
+    <link href="css/plugins.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/coloring.css" rel="stylesheet" type="text/css">
     <!-- color scheme -->
-    <link id="colors" href="{% static 'css/colors/scheme-01.css' %}" rel="stylesheet" type="text/css">
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
 </head>
 
 <body onload="initialize()" class="dark-scheme">
@@ -29,7 +28,29 @@
         <!-- page preloader close -->
 
         <!-- header begin -->
-        <header class="transparent">            
+        <header class="transparent has-topbar">
+            <div id="topbar" class="topbar-dark text-light">
+                <div class="container">
+                    <div class="topbar-left xs-hide">
+                        <div class="topbar-widget">
+                            <div class="topbar-widget"><a href="#"><i class="fa fa-phone"></i>+208 333 9296</a></div>
+                            <div class="topbar-widget"><a href="#"><i class="fa fa-envelope"></i>contact@rentaly.com</a></div>
+                            <div class="topbar-widget"><a href="#"><i class="fa fa-clock-o"></i>Mon - Fri 08.00 - 18.00</a></div>
+                        </div>
+                    </div>
+                
+                    <div class="topbar-right">
+                        <div class="social-icons">
+                            <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
+                            <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
+                            <a href="#"><i class="fa fa-youtube fa-lg"></i></a>
+                            <a href="#"><i class="fa fa-pinterest fa-lg"></i></a>
+                            <a href="#"><i class="fa fa-instagram fa-lg"></i></a>
+                        </div>
+                    </div>  
+                    <div class="clearfix"></div>
+                </div>
+            </div>
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -39,7 +60,7 @@
                                     <!-- logo begin -->
                                     <div id="logo">
                                         <a href="index.html">
-                                            <img class="logo-1" src="{% static 'images/logo-light.png' %}" alt="">
+                                            <img class="logo-1" src="images/logo-light.png" alt="">
                                             <img class="logo-2" src="images/logo-light.png" alt="">
                                         </a>
                                     </div>
@@ -258,7 +279,7 @@
                                             </div>
                                             <div class="d-price">
                                                 Daily rate from <span>$265</span>
-                                                <a class="btn-main" href="car-single.html">Rent Now</a>
+                                                <a class="btn-main" href="02_dark-car-single.html">Rent Now</a>
                                             </div>
                                         </div>
                                     </div>
@@ -284,7 +305,7 @@
                                             </div>
                                             <div class="d-price">
                                                 Daily rate from <span>$244</span>
-                                                <a class="btn-main" href="car-single.html">Rent Now</a>
+                                                <a class="btn-main" href="02_dark-car-single.html">Rent Now</a>
                                             </div>
                                         </div>
                                     </div>
@@ -310,7 +331,7 @@
                                             </div>
                                             <div class="d-price">
                                                 Daily rate from <span>$167</span>
-                                                <a class="btn-main" href="car-single.html">Rent Now</a>
+                                                <a class="btn-main" href="02_dark-car-single.html">Rent Now</a>
                                             </div>
                                         </div>
                                     </div>
@@ -336,7 +357,7 @@
                                             </div>
                                             <div class="d-price">
                                                 Daily rate from <span>$147</span>
-                                                <a class="btn-main" href="car-single.html">Rent Now</a>
+                                                <a class="btn-main" href="02_dark-car-single.html">Rent Now</a>
                                             </div>
                                         </div>
                                     </div>
@@ -362,7 +383,7 @@
                                             </div>
                                             <div class="d-price">
                                                 Daily rate from <span>$238</span>
-                                                <a class="btn-main" href="car-single.html">Rent Now</a>
+                                                <a class="btn-main" href="02_dark-car-single.html">Rent Now</a>
                                             </div>
                                         </div>
                                     </div>
@@ -388,7 +409,7 @@
                                             </div>
                                             <div class="d-price">
                                                 Daily rate from <span>$106</span>
-                                                <a class="btn-main" href="car-single.html">Rent Now</a>
+                                                <a class="btn-main" href="02_dark-car-single.html">Rent Now</a>
                                             </div>
                                         </div>
                                     </div>
