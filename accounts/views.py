@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login, logout
 from . models import Account
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.hashers import make_password
 from django.urls import reverse
+from django.core.exceptions import ValidationError
+
 def registerUser(request, user_type):
 
         if request.method == 'POST':
@@ -32,6 +33,11 @@ def registerUser(request, user_type):
             is_buyer = role == 'buyer'
             is_seller = role == 'seller'
             
+            if Account.objects.filter(email=email).exists():
+                messages.error(request, 'Email Already exist')
+                return redirect(reverse('register_user', args=[user_type]))
+            
+
             user = Account.objects.create(full_name=full_name,email=email,password=make_password(password),is_buyer=is_buyer,is_seller=is_seller)
             user.save()
 
@@ -95,13 +101,20 @@ def login_user(request):
 
         if user is not None:
             login(request, user)
-            messages.success(request, "Login Successful")
+            # messages.success(request, "Login Successful")
             return redirect('home') 
         else:
             messages.error(request, "Invalid Email or Password")
             return redirect('login')  
 
     return render(request, 'accounts/login.html') 
+
+def logoutUser(request):
+    logout(request)
+    return redirect('home')
+
+def userProfile(request):
+    return render(request, 'accounts/profile.html')
 
 
     
